@@ -2,10 +2,17 @@
 include 'connection.php'; 
 
 $sql = "SELECT * FROM leaderboard ORDER BY score DESC";
-$res = $connection->query($sql);
+$query = $connection->prepare($sql);
 
-$players = $res->fetch_all(MYSQLI_ASSOC);
+$query->execute();
 
-header('Content-Type: application/json');
-echo json_encode($players);
+$result = $query->get_result();
+
+$response = [];
+
+while ($player = $result->fetch_assoc()) {
+    $response[] = $player;
+}
+
+echo json_encode($response);
 ?>

@@ -1,6 +1,6 @@
 
 body {
-  background-color: #ad3636;
+  background-color: #ffffffec;
   margin: 0;
   text-align: center;
   min-height: 100vh;
@@ -132,25 +132,35 @@ table, th, td {
   display: flex;
   justify-content: center; 
   align-items: center;     
-  flex-direction: column;  
-
-  width: 100%;
+  flex-direction: column; 
+  margin-top: 20px; 
 }
 
 #leaderboard {
   width: 100%;
-  max-width: 600px; 
+  max-width: 600px;
   border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-#leaderboard th, #leaderboard td {
-  border: 1px solid black;
-  padding: 10px;
+#leaderboard th {
+  border: 2px solid black;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #256127;
+  color: white;
+}
+
+#leaderboard td {
+  border: 2px solid black;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
+#leaderboard tr:nth-child(even) td {
+  background-color: #e2f3e0;
+}
 
-  #leaderboard th, #leaderboard td {
-    padding: 8px;
-    font-size: 14px;
-  }
+

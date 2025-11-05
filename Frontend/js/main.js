@@ -13,5 +13,6 @@ axios.get('../Backend/get_player_stats.php')
       tbody.innerHTML += row;
     }
     })
- 
+ console.log("main.js is working from leader_b");
+
 

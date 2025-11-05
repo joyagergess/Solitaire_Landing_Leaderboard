@@ -1,5 +1,5 @@
 <?php
-include 'connection.php'; // Make sure this file exists and works
+include 'connection.php'; 
 
 $sql = "SELECT * FROM leaderboard ORDER BY score DESC";
 $res = $connection->query($sql);

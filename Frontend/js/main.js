@@ -9,10 +9,9 @@ axios.get('../Backend/get_player_stats.php')
                   '<td>' + players[i].name + '</td>' +
                   '<td>' + players[i].score + '</td>' +
                   '<td>' + players[i].duration + '</td>' +
+                  '<td>Top ' + (i + 1) + '</td>' +
                 '</tr>';
       tbody.innerHTML += row;
     }
-    })
- console.log("main.js is working from leader_b");
-
-
+  })
+  

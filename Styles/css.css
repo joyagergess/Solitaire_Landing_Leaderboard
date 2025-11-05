@@ -233,7 +233,7 @@ table, th, td {
   background-color: #256127;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

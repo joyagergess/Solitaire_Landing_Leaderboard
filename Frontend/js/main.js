@@ -13,5 +13,5 @@ axios.get('../Backend/get_player_stats.php')
                 '</tr>';
       tbody.innerHTML += row;
     }
-  })
+  }) ;
   

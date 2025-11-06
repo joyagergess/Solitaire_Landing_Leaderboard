@@ -13,10 +13,10 @@ function loadLeaderboard() {
                   '<td>' + players[i].duration + '</td>' +
                   '<td>Top ' + (i + 1) + '</td>' +
                 '</tr>';
-         tbody.innerHTML += row;
+        tbody.innerHTML += row;
       }
     });
 }
 
-loadLeaderboard();
+loadLeaderboard(); ;
 

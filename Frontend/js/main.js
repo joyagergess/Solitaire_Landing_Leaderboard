@@ -19,3 +19,6 @@ function loadLeaderboard() {
 }
 
 loadLeaderboard();
+
+console.log("Loading ");
+

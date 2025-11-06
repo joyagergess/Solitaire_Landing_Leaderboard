@@ -56,6 +56,7 @@ body {
 
 .img_appstore {
   width: 200px;
+  
 }
 .img_appstore2 {
   width: 220px;
@@ -218,8 +219,6 @@ table, th, td {
   width: 250px;
   border-radius: 8px;
 }
-
-
 
 .add_score {
   display: flex;

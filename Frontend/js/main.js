@@ -21,5 +21,31 @@ function loadLeaderboard() {
 
 loadLeaderboard();
 
-console.log("Loading ");
+submit_button.addEventListener('click', function() {
+  var name = name_input.value.trim();
 
+  if (name === '') {
+    message.textContent = "Enter your name";
+    message.style.color = "red";
+    return;
+  }
+
+  axios.post('../Backend/add_score.php', { name: name })
+    .then(function(response) {
+      var data = response.data; 
+      message.textContent = data.message;
+
+      if (data.success) {
+        message.style.color = "green";
+        name_input.value = "";
+        loadLeaderboard();
+      } else {
+        message.style.color = "red";
+      }
+    })
+    .catch(function(error) {
+      console.log(error);
+      message.textContent = "There is an error";
+      message.style.color = "red";
+    });
+});

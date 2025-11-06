@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Score</title>
+  <link rel="stylesheet" href="../styles/css.css">
+</head>
+<body>
+
+  <div class="add_score_page">
+    <h2>Submit Your Score</h2>
+    <form id="addScoreForm">
+      <input type="text" name="name" placeholder="Your name" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <div class="div_table">
+    <table id="leaderboard">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Score</th>
+          <th>Duration</th>
+          <th>Rank</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  
+<script src="js/axios.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

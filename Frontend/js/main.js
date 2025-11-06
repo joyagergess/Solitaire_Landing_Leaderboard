@@ -19,7 +19,7 @@ function loadLeaderboard() {
     });
 }
 
-//loadLeaderboard();
+loadLeaderboard();
 
 console.log("Loading ");
 

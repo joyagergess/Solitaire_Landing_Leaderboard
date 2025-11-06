@@ -23,9 +23,16 @@ loadLeaderboard();
 
 submit_button.addEventListener('click', function() {
   var name = name_input.value.trim();
+  var namePattern = /^[A-Za-z\s]+$/;
 
   if (name === '') {
     message.textContent = "Enter your name";
+    message.style.color = "red";
+    return;
+  }
+
+    if (!namePattern.test(name)) {
+    message.textContent = "Name can only contain letters and spaces";
     message.style.color = "red";
     return;
   }

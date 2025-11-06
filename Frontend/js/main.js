@@ -18,5 +18,5 @@ function loadLeaderboard() {
     });
 }
 
-loadLeaderboard(); ;
+loadLeaderboard();
 

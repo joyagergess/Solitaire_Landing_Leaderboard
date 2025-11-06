@@ -14,7 +14,6 @@ $name = $data['name'] ?? '';
 
 if (!$name) {
         Response(false, "Enter your name");
-
 }
 
 $sql = "SELECT * FROM leaderboard WHERE name = ?";
@@ -25,7 +24,6 @@ $result = $query->get_result();
 
 if ($result->num_rows > 0) {
     Response(false, "Name already exists, try another one");
-
 }
 
 $score = rand(0, 1000);
@@ -38,7 +36,6 @@ $query->bind_param("sii", $name, $score, $duration);
 if ($query->execute()) {
     Response(true, "Score is added");
 } 
-    
  else {
         Response(false, "Failed to add the score");
      }

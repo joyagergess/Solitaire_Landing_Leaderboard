@@ -3,6 +3,7 @@ function loadLeaderboard() {
   axios.get('../Backend/get_player_stats.php')
      .then(function(response) {
       var players = response.data;
+      var test = "o";
       var tbody = document.querySelector('#leaderboard tbody');
       tbody.innerHTML = '';
 

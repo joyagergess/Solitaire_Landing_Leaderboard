@@ -5,8 +5,12 @@ $data = json_decode(file_get_contents("php://input"), true);
 $name = $data['name'] ?? '';
 
 if (!$name) {
-    echo "Name is required";
-    exit;
+     $response = [
+        "success" => false,
+        "message" => "Enter your name"
+    ];
+    echo json_encode($response);   
+     exit;
 }
 
 $sql = "SELECT * FROM leaderboard WHERE name = ?";
@@ -16,8 +20,12 @@ $query->execute();
 $result = $query->get_result();
 
 if ($result->num_rows > 0) {
-    echo "Name already exists";
-    exit;
+     $response = [
+        "success" => false,
+        "message" => "Name already exists , try another one"
+    ];
+    echo json_encode($response);  
+      exit;
 }
 
 $score = rand(0, 1000);
@@ -28,8 +36,17 @@ $query = $connection->prepare($sql);
 $query->bind_param("sii", $name, $score, $duration);
 
 if ($query->execute()) {
-    echo "Score added successfully";
-} else {
-    echo "Failed to add the score";
-}
+$response = [
+        "success" => true,
+        "message" => "Score is added"
+    ];
+    echo json_encode($response);
+} 
+    
+ else {
+      $response = [
+        "success" => false,
+        "message" => "Failed to add the score"
+       ];
+     echo json_encode($response);}
 ?>

@@ -9,16 +9,17 @@ async function loadLeaderboard() {
     tbody.innerHTML = '';
 
     for (let i = 0; i < players.length; i++) {
-      const row = `
-        <tr>
-          <td>${players[i].name}</td>
-          <td>${players[i].score}</td>
-          <td>${players[i].duration}</td>
-          <td>Top ${i + 1}</td>
-        </tr>
-      `;
-      tbody.innerHTML += row;
-    }
+  const row = `
+    <tr>
+      <td>${players[i].name}</td>
+      <td>${players[i].score}</td>
+      <td>${players[i].duration} sec</td>
+      <td>Top ${i + 1}</td>
+    </tr>
+  `;
+  tbody.innerHTML += row;
+}
+
 
   } catch (error) {
     console.log("error");

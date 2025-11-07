@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
 }
 
 $score = rand(0, 1000);
-$duration = rand(30, 300);
+$duration = rand(30, 600);
 
 $sql = "INSERT INTO leaderboard (name, score, duration) VALUES (?, ?, ?)";
 $query = $connection->prepare($sql);

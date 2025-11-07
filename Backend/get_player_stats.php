@@ -1,7 +1,7 @@
 <?php
 include 'connection.php'; 
 
-$sql = "SELECT * FROM leaderboard ORDER BY score DESC";
+$sql = "SELECT * FROM leaderboard ORDER BY score DESC, duration ASC";
 $query = $connection->prepare($sql);
 
 $query->execute();
